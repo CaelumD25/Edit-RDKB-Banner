@@ -2,9 +2,6 @@ import PySimpleGUI as sg
 from bs4 import BeautifulSoup
 import htmlparser as hp
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.options import Options
 
 # The theme for the appearance of the application
@@ -12,6 +9,7 @@ sg.theme("reddit")
 mobile = False
 live = True
 
+# Path for the gecko driver
 driver_path = "geckodriver.exe"
 
 
@@ -23,6 +21,7 @@ if live is True:
     driver.get("https://rdkb.com/")
     primary_grid = driver.find_elements_by_id("primary-grid")[0]
     in_file = primary_grid.get_attribute("outerHTML")
+    driver.quit()
     soup = BeautifulSoup(in_file, 'html.parser')
 else:
     # Gets the banner for editing from file
