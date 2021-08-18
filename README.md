@@ -23,6 +23,7 @@ Typical Use:
 1. Launch the application
 2. **Select** the section you would like to edit from the drop-down menu and press **switch**, the UI will tell you which section you are currently editing.
 3. Change the **fields** and they will change the html accordingly to what is on the page
+
 ![ex](https://user-images.githubusercontent.com/54737724/129944817-6c444efb-041e-4542-a0ef-1faa6de8f005.png)
 
 4. Press copy to clipboard to **copy** the html code to your **clipboard**
